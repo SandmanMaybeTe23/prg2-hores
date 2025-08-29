@@ -1,14 +1,10 @@
 
-
-
-
 Player ={
 
     "name": "",
     "speed": 1,
     "stamina":1,
 }
-
 
 
 def input_int(prompt):
@@ -19,11 +15,10 @@ def input_int(prompt):
             print("Invalid input. Please enter a number.")
 
 
-
 def skills():
     skill=11
-    min_value=1
-    max_value=8
+    min_value= 1
+    max_value= 8
 
 
     print(f"Skill Points:{skill}")
@@ -32,7 +27,7 @@ def skills():
         while True:
             print(f"Skill Points:{skill}")
             x=input_int(f" Please enter a valid number (Max {max_value} Min {min_value}) ")
-            if x >=min_value or skill<= max_value:
+            if x<min_value or x>max_value :
                 Player["speed"]=x            
                 skill-=x
                 break
@@ -55,7 +50,7 @@ def skills():
         while True:
             print(f"Skill Points:{skill}")
             x=input_int(f" Please enter a valid number (Max {max_value} Min {min_value}) ")
-            if x >=min_value or skill<= max_value:
+            if x<min_value or x>max_value:
                 Player["stamina"]=x            
                 skill-=x
                 break
@@ -65,13 +60,5 @@ def skills():
         skill-=x
         Player["stamina"]=x
 
-
-
-
-
-
-               
-            
                 
 skills()
-
